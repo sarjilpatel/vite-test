@@ -52,3 +52,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.dataitem {
+  display: flex;
+  gap: 30px;
+}
