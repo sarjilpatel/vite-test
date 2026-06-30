@@ -1,10 +1,17 @@
 import Navbar from "./Navbar";
 
-const PageWrapper = ({ children }: any) => {
+const appName = import.meta.env.VITE_APP_NAME ?? "ShopVite";
+const appVersion = import.meta.env.VITE_APP_VERSION ?? "1.0.0";
+
+const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="pagewrapper">
+    <div className="page-wrapper">
       <Navbar />
-      {children}
+      <main className="page-content">{children}</main>
+      <footer className="footer">
+        {appName} v{appVersion} — Built with React + Vite · Deployed via{" "}
+        <a href="#">Deploxa</a>
+      </footer>
     </div>
   );
 };

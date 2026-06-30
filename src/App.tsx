@@ -1,7 +1,7 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import PageWrapper from "./PageWrapper";
 
@@ -15,10 +15,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/about",
+    path: "/products",
     element: (
       <PageWrapper>
-        <About />
+        <Products />
       </PageWrapper>
     ),
   },
@@ -33,11 +33,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
